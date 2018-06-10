@@ -1,0 +1,12 @@
+* {
+    margin:0;
+    padding:0;
+}
+.wrap {
+    background-color:orange;
+    width:30%;
+    padding-bottom:30%;
+    margin:0.5%;
+    float:left;
+    border-radius:3%;
+}
