@@ -5,20 +5,19 @@
 body {
     background-color:#68cdd5;
     color:#fff;
-    font-size:120%;
+    font-size:150%;
 }
 .header {
-    padding-bottom:5%;
-    margin:1% 0 0 2%;
+    margin-bottom:5%;
+    transform:translate(1%,1%);
 }
 .hmain {
     text-align:center;
-    padding-bottom:5%;
+    margin-bottom:5%;
 }
 .main {
     text-align:center;
-    padding-bottom:10%;
-    margin:0 15%;
+    margin:0 15% 10% 15%;
 }
 .left{
     text-align:center;
