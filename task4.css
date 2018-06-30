@@ -39,8 +39,6 @@ body {
     width:65%;
     padding:2%;
     font-size:inherit;
-    border:none;      /*隐藏input元素的边框*/
-    outline:none;    /*隐藏当点击input元素所产生的焦点*/
 }
 /*改变input元素中placeholder属性的字体颜色*/
 .form div input::placeholder {
@@ -54,8 +52,11 @@ body {
     margin-top:5%;
     color:#fff;
     padding:2.8% 0;
-    border:none;
     font-size:112.5%;
+}
+.form input {
+    border:none;     /*隐藏input元素的边框*/
+    outline:none;   /*隐藏当点击input元素所产生的焦点*/
 }
 /*利用紧邻同胞选择符对span元素进行浮动*/
 .form+span {
