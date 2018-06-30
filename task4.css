@@ -29,3 +29,40 @@ body {
     color:#fff;
     text-decoration:none;
 }
+.form div {
+    background-color:#fff;
+    margin-top:1.2%;
+    padding:2%;
+}
+/*设定用于输入的input元素*/
+.form div input {
+    width:65%;
+    padding:2%;
+    font-size:inherit;
+    border:none;      /*隐藏input元素的边框*/
+    outline:none;    /*隐藏当点击input元素所产生的焦点*/
+}
+/*改变input元素中placeholder属性的字体颜色*/
+.form div input::placeholder {
+    color:#eff0f4;
+}
+/*利用子选择符设定点击按钮的样式*/
+.form>input {
+    display:block;
+    background-color:#5fc0cd;
+    width:100%;
+    margin-top:5%;
+    color:#fff;
+    padding:2.8% 0;
+    border:none;
+    font-size:112.5%;
+}
+/*利用紧邻同胞选择符对span元素进行浮动*/
+.form+span {
+    float:right;
+    margin-bottom:30%;
+}
+/*为span元素中的a元素设定颜色，为span元素设定颜色由于继承原因导致a元素不会改变颜色*/
+.form+span a {
+    color:#5fc0cd;
+}
