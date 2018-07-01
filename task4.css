@@ -32,12 +32,11 @@ body {
 .form div {
     background-color:#fff;
     margin-top:1.2%;
-    padding:2%;
 }
 /*设定用于输入的input元素*/
 .form div input {
-    width:65%;
-    padding:2%;
+    width:70%;
+    margin:2% 0;
     font-size:inherit;
 }
 /*改变input元素中placeholder属性的字体颜色*/
@@ -51,7 +50,7 @@ body {
     width:100%;
     margin-top:5%;
     color:#fff;
-    padding:2.8% 0;
+    padding:2% 0;
     font-size:112.5%;
 }
 .form input {
@@ -66,4 +65,14 @@ body {
 /*为span元素中的a元素设定颜色，为span元素设定颜色由于继承原因导致a元素不会改变颜色*/
 .form+span a {
     color:#5fc0cd;
+}
+/*图片与input元素相平*/
+.form img,.form input {
+    vertical-align:middle;
+}
+/*通过为img添加右边框与实现分隔线*/
+.form img {
+    padding:0 3%;
+    border-right:3px solid #eff0f4;
+    max-width:100%;
 }
