@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>护工个人主页</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <style>
+        /*去除页面的内外边距*/
+        * {
+            margin: 0;
+            padding: 0;
+            max-height: 100%;
+        }
+
+        /*设置字体大小*/
+        body {
+            font-size: 62.5%;
+        }
+
+        /*设置头部*/
+        header {
+            background-color: #5fc0cd;     /*背景颜色*/
+            color: #fff;                   /*字体颜色*/
+            text-align: center;              /*文本居中*/
+            line-height: 1.5;
+            padding: 1% 0;
+        }
+        /*设置头部图片*/
+        header img {
+            position:absolute;               /*绝对定位*/
+            top: 1%;
+            left: 1%;
+            -webkit-transform: scale(.5);
+               -moz-transform: scale(.5);
+                -ms-transform: scale(.5);
+                 -o-transform: scale(.5);
+                    transform: scale(.5);            /*水平缩放0.5倍*/
+        }
+        
+        .main {
+            display: flex;
+            align-items: center;
+            background-image: url(images/task5_4.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-color: #ccc;
+            background-blend-mode: multiply;
+            padding: 5% 1% 2% 0;
+            color: #fff;
+        }
+
+        .main .logo {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            overflow: hidden;
+            text-align: center;
+            margin-left: 2%;
+        }
+
+        .person {
+            margin-left: 5%;
+        }
+
+        .main1 {
+            border-bottom: 1px solid #ccc;
+            padding: 1%;
+        }
+
+        .main2 .star {
+            padding: 1%;
+            border-bottom: 1px solid #ccc;
+            margin: 0 1%;
+        }
+        .main2 img {
+            width: 3%;
+            height: 3%;
+        }
+        .main2 .line {
+            display: inline-block;
+            margin-right: 3%;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="images/task5_1.png" />
+            <span>个人主页</span>
+        </header>
+        <div class="main">
+            <div class="logo">
+                <img src="images/task5_2.png" />
+            </div>
+            <div class="person">
+                <div class="name">
+                    <span>徐世林&nbsp;55岁</span>
+                </div>
+                <div class="city">
+                    <img src="images/task5_3.png" />
+                    <span>京城&nbsp;&middot;&nbsp;四方&nbsp;&middot;&nbsp;报纸林</span>
+                </div>
+            </div>
+        </div>
+        <div class="main1">
+            <span class="line1"></span>专业技能
+        </div>
+        <div class="main2">
+            <div class="star">
+                <img src="images/task5_5.png" /><span class="line">&nbsp;住家</span>
+                <img src="images/task5_5.png" /><span>&nbsp;不含餐</span>
+            </div>
+            <div class="main3">
+                <span>从业年限</span>
+                <span>0~3年</span>
+            </div>
+            <div class="main3">
+                <span>工作时间</span>
+                <span>全天</span>
+            </div>
+            <div class="main3">
+                <span>服务价格</span>
+                <span>25元/小时</span>
+            </div>
+            <div class="main3">
+                <span>自我介绍</span>
+                <span>可以洗衣、做饭、照顾老人。在护工方面有5年的经验，经验丰富。</span>
+            </div>
+        </div>
+        <footer>
+            <input type="button" value="留言" class="left" />
+            <input type="button" value="电话联系" class="right" />
+        </footer>
+    </body>
+</html>
