@@ -14,7 +14,7 @@
 
         /*设置字体大小*/
         body {
-            font-size: 62.5%;
+            font-size: 100%;
         }
 
         /*设置头部*/
@@ -76,8 +76,9 @@
         }
 
         .main1 .line1 {
-            border-left: 3px solid #5fc0cd;
+            border-left: 2px solid #5fc0cd;
             padding-right: 1%;
+            font-size: 62.5%;            /*利用字体大小缩小边框的高度*/
         }
 
         .main2 .star {
@@ -90,39 +91,35 @@
             margin-bottom: -5px;          /*图片与文字居中对齐*/
         }
 
-        .main3 {
+        .flex {
             padding: 1%;
             border-bottom: 1px solid #ccc;
             margin:0 1%;
+            display: flex;
         }
         
         .gray {
             color:#999;
-            padding-right: 1%;
-            border-right: 1px solid #e1e5e7;
-            margin-right: 1%;
         }
         
+        /*服务价格颜色*/
         .red {
             color: #e26163;
         }
 
-        .flex {
-            display: flex;
-        }
-
-        .float {
-            color: #999;
-            white-space: nowrap;  
+        .center {
+            white-space: nowrap;       
             align-self: center; 
         }
-
+        
+        /*用于分隔的竖线*/
         .line {
             margin: 0 1%;
             padding-right: 1px;
             background-color: #e1e5e7;
         }
 
+        /*页脚*/
         footer {
             position: fixed;
             bottom: 0;
@@ -136,7 +133,7 @@
             width: 48%;
             padding: 1% 0;
             font-weight: bold;
-            font-size: 160%;
+            font-size: 100%;
             float: left;
             border-radius: 10px;
         }
@@ -148,7 +145,7 @@
             width: 48%;
             padding: 1% 0;
             font-weight: bold;
-            font-size: 160%;
+            font-size: 100%;
             float: right;
             border-radius: 10px;
         }
@@ -169,7 +166,7 @@
                 </div>
                 <div class="city">
                     <img src="images/task5_3.png" />
-                    <span>京城&nbsp;&middot;&nbsp;四方&nbsp;&middot;&nbsp;报纸林</span>
+                    <span>京城&middot;四方&middot;报纸林</span>
                 </div>
             </div>
         </div>
@@ -181,20 +178,24 @@
                 <img src="images/task5_5.png" /><span>住家</span>
                 <img src="images/task5_5.png" /><span>不含餐</span>
             </div>
-            <div class="main3">
+            <div class="flex">
                 <span class="gray">从业年限</span>
+                <span class="line"></span>
                 <span>0~3年</span>
             </div>
-            <div class="main3">
+            <div class="flex">
                 <span class="gray">工作时间</span>
+                <span class="line"></span>
                 <span>全天</span>
             </div>
-            <div class="main3">
+            <div class="flex">
                 <span class="gray">服务价格</span>
+                <span class="line"></span>
                 <span class="red">25元/小时</span>
             </div>
-            <div class="main3 flex">
-                <span class="float">自我介绍</span><span class="line"></span>
+            <div class="flex">
+                <span class="gray center">自我介绍</span>
+                <span class="line"></span>
                 <span>可以洗衣、做饭、照顾老人。在护工方面有5年的经验，经验丰富。可以洗衣、做饭、照顾老人。在护工方面有5年的经验，经验丰富。</span>
             </div>
         </div>
