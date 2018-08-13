@@ -89,9 +89,6 @@
             transform: scale(.5);
             margin-bottom: -5px;          /*图片与文字居中对齐*/
         }
-        .main2 .line {
-            padding-right: 1%;
-        }
 
         .main3 {
             padding: 1%;
@@ -109,7 +106,23 @@
         .red {
             color: #e26163;
         }
-        
+
+        .flex {
+            display: flex;
+        }
+
+        .float {
+            color: #999;
+            white-space: nowrap;  
+            align-self: center; 
+        }
+
+        .line {
+            margin: 0 1%;
+            padding-right: 1px;
+            background-color: #e1e5e7;
+        }
+
         footer {
             position: fixed;
             bottom: 0;
@@ -165,8 +178,8 @@
         </div>
         <div class="main2">
             <div class="star">
-                <img src="images/task5_5.png" /><span class="line">&nbsp;住家</span>
-                <img src="images/task5_5.png" /><span>&nbsp;不含餐</span>
+                <img src="images/task5_5.png" /><span>住家</span>
+                <img src="images/task5_5.png" /><span>不含餐</span>
             </div>
             <div class="main3">
                 <span class="gray">从业年限</span>
@@ -180,8 +193,8 @@
                 <span class="gray">服务价格</span>
                 <span class="red">25元/小时</span>
             </div>
-            <div class="main3">
-                <span class="gray">自我介绍</span>
+            <div class="main3 flex">
+                <span class="float">自我介绍</span><span class="line"></span>
                 <span>可以洗衣、做饭、照顾老人。在护工方面有5年的经验，经验丰富。</span>
             </div>
         </div>
