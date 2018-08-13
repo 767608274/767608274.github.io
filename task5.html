@@ -52,7 +52,7 @@
             color: #fff;
         }
 
-        .main .logo {
+        .logo {
             border-radius: 50%;
             height: 100px;
             width: 100px;
@@ -66,7 +66,7 @@
             margin-left: 5%;
         }
 
-        .person .city img {
+        .city img {
             transform: scale(.5);
             margin-bottom: -5px;
         }
@@ -75,26 +75,28 @@
             padding: 1%;
         }
 
-        .main1 .line1 {
+        .line1 {
             border-left: 2px solid #5fc0cd;
             padding-right: 1%;
-            font-size: 62.5%;            /*利用字体大小缩小边框的高度*/
+            font-size: 62.5%;             /*利用字体大小缩小边框的高度*/
+            vertical-align: middle;
+            line-height: 1.5;
         }
 
-        .main2 .star {
-            padding: 1%;
+        .star {
+            padding: 3% 2%;
             border-bottom: 1px solid #ccc;
-            margin: 0 1%;
+            margin: 0 2%;
         }
-        .main2 img {
-            transform: scale(.5);
+        .star img {
+            transform: scale(.7);
             margin-bottom: -5px;          /*图片与文字居中对齐*/
         }
 
         .flex {
-            padding: 1%;
+            padding: 3%;
             border-bottom: 1px solid #ccc;
-            margin:0 1%;
+            margin: 0 2%;
             display: flex;
         }
         
@@ -114,7 +116,7 @@
         
         /*用于分隔的竖线*/
         .line {
-            margin: 0 1%;
+            margin: 0 3%;
             padding-right: 1px;
             background-color: #e1e5e7;
         }
@@ -125,29 +127,26 @@
             bottom: 0;
             width:100%;
         }
-        .left {
+
+        footer input {
+            outline: none;
+            width: 48%;
+            padding: 1% 0;
+            font-weight: bold;
+            font-size: 100%;
+            border-radius: 10px;
+        }
+        input.left {
             color: #5fc0cd;
             border: 2px solid;
             background-color: #fff;
-            outline: none;
-            width: 48%;
-            padding: 1% 0;
-            font-weight: bold;
-            font-size: 100%;
             float: left;
-            border-radius: 10px;
         }
-        .right {
+        input.right {
             color: #fff;
             border: 2px solid #5fc0cd;
             background-color: #5fc0cd;
-            outline: none;
-            width: 48%;
-            padding: 1% 0;
-            font-weight: bold;
-            font-size: 100%;
             float: right;
-            border-radius: 10px;
         }
         </style>
     </head>
@@ -175,8 +174,8 @@
         </div>
         <div class="main2">
             <div class="star">
-                <img src="images/task5_5.png" /><span>住家</span>
-                <img src="images/task5_5.png" /><span>不含餐</span>
+                <img src="images/star.png" /><span>住家</span>
+                <img src="images/star.png" /><span>不含餐</span>
             </div>
             <div class="flex">
                 <span class="gray">从业年限</span>
