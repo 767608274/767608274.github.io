@@ -19,17 +19,19 @@
 
         /*设置头部*/
         header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
             background-color: #5fc0cd;     /*背景颜色*/
             color: #fff;                   /*字体颜色*/
             text-align: center;              /*文本居中*/
-            line-height: 1.5;
-            padding: 1% 0;
         }
         /*设置头部图片*/
         header img {
             position:absolute;               /*绝对定位*/
-            top: -5px;
-            left: 1%;
+            top: 7px;
+            left: 5px;
             -webkit-transform: scale(.5);
                -moz-transform: scale(.5);
                 -ms-transform: scale(.5);
@@ -39,20 +41,22 @@
         
         header span {
             font-weight: bold;
+            padding-top: 14px;
+            display: block;
         }
-        .main {
+        main {
             display: flex;
             align-items: center;
-            background-image: url(images/task5_4.png);
+            background-image: url(images/task5/background.png);
             background-repeat: no-repeat;
-            background-size: 100% 100%;
+            background-size: cover;
             background-color: #ccc;
             background-blend-mode: multiply;
             padding: 5% 1% 2% 0;
             color: #fff;
         }
 
-        .logo {
+        .head_portrait {
             border-radius: 50%;
             height: 100px;
             width: 100px;
@@ -72,21 +76,21 @@
         }
         .main1 {
             border-bottom: 1px solid #ccc;
-            padding: 3%;
+            padding: 2%;
         }
 
         .line1 {
             display: inline-block;
             border-left: 3px solid #5fc0cd;
-            padding-right: 2%;
-            padding-bottom: 5%;
+            padding-right: 1%;
+            padding-bottom: 1%;
             margin-top: -3px;              /*向上进3像素使边框和内容相平*/
             font-size: 62.5%;             /*利用字体大小缩小边框的高度*/
             vertical-align: middle;          /*基线对齐*/
         }
 
         .star {
-            padding: 3% 2%;
+            padding: 2% 2%;
             border-bottom: 1px solid #ccc;
             margin: 0 2%;
         }
@@ -96,7 +100,7 @@
         }
 
         .flex {
-            padding: 3%;
+            padding: 1% 3%;
             border-bottom: 1px solid #ccc;
             margin: 0 2%;
             display: flex;
@@ -118,7 +122,7 @@
         
         /*用于分隔的竖线*/
         .line {
-            margin: 0 3%;
+            margin: 0 2%;
             padding-right: 1px;
             background-color: #e1e5e7;
         }
@@ -154,31 +158,31 @@
     </head>
     <body>
         <header>
-            <img src="images/task5_1.png" />
+            <img src="images/task5/back.png" />
             <span>个人主页</span>
         </header>
-        <div class="main">
-            <div class="logo">
-                <img src="images/task5_2.png" />
+        <main>
+            <div class="head_portrait">
+                <img src="images/task5/head-portrait.png" />
             </div>
             <div class="person">
                 <div class="name">
                     <span>徐世林&nbsp;55岁</span>
                 </div>
                 <div class="city">
-                    <img src="images/task5_3.png" />
+                    <img src="images/task5/coordinate.png" />
                     <span>京城&middot;四方&middot;报纸林</span>
                 </div>
             </div>
-        </div>
+        </main>
         <div class="main1">
             <span class="line1"></span>
             <span>专业技能</span>
         </div>
         <div class="main2">
             <div class="star">
-                <img src="images/star.png" /><span>住家</span>
-                <img src="images/star.png" /><span>不含餐</span>
+                <img src="images/task5/star.png" /><span>住家</span>
+                <img src="images/task5/star.png" /><span>不含餐</span>
             </div>
             <div class="flex">
                 <span class="gray">从业年限</span>

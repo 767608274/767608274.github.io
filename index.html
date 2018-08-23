@@ -19,7 +19,7 @@
             line-height: 1.5;        /*行高*/
             font-style: italic;      /*斜体*/
         }
-        .fixed {
+      /*  .fixed {
             position: fixed;
             top: 10%;
             bottom: 10%;
@@ -39,13 +39,33 @@
         }
         .fixed li {
             list-style-position: inside;      /*列表项标记放置在边框内部*/
-            margin: 2% 0;
+           /* margin: 2% 0;
             border-top: 1px solid #e2e2e2;
             padding-top: 5%;
         }
         .fixed a {
             text-decoration: none;
             color: #777;
+        }*/
+        nav {
+            border: 1px solid #fff;
+            border-radius: 1rem;
+            background-color: #fff;
+            overflow: auto;
+            padding: 1%;
+        }
+        nav .nav1 {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            position: relative;
+        }
+        nav a {
+            text-decoration: none;
+            color: #777;
+        }
+        nav .nav2 {
+            
         }
         footer {
             position: absolute;
@@ -59,14 +79,20 @@
 </head>
 <body>
     <h1>我的世界！</h1>
-    <aside class="fixed">
-        <h3>任务</h3>
-        <ol>
-            <li><a href="task1.html">任务1--九宫格</a></li>
-            <li><a href="task3.html">任务3--魔镜介绍页</a></li>
-            <li><a href="task4.html">任务4--登录页面</a></li>
-        </ol>
-    </aside>
+    <nav>
+        <ul class="nav1">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">个人资料</a></li>
+            <li><a href="#">个人任务</a></li>
+                <ul class="nav2">
+                    <li><a href="task1.html">任务1--九宫格</a></li>
+                    <li><a href="task3.html">任务3--魔镜介绍页</a></li>
+                    <li><a href="task4.html">任务4--登录页面</a></li>
+                </ul>
+            <li><a href="#">个人笔记</a></li>
+        </ul>
+       
+    </nav>
     <footer>
         提前占位，我是一个页脚
     </footer>
