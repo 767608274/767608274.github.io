@@ -7,12 +7,15 @@
 /*设置字体大小为16像素，页面高度为100%*/
 html,body {
     font-size: 16px;
-    height: 100%;
 }
 
 /*所有图片缩放0.7倍*/
 img {
-    transform: scale(.7);
+    zoom: .7;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 /*----------头部--------*/
@@ -38,6 +41,7 @@ header {
     width: 10rem;                    /*以字体大小（16px）*10rem（10倍）所形成的宽度*/
     height: 3rem;                    /*以字体大小（16px）*3rem（3倍）所形成的的高度*/
     border-radius: .625rem;          /*以字体大小（16px）*0.625rem（0.625倍）所形成的圆角弧度*/
+    text-align: center;              /*文字居中*/
 }
 
 .box span {
@@ -46,13 +50,20 @@ header {
     border-radius: .625rem;          /*圆角*/
     line-height: 3rem;               /*字体大小3倍的文本高度，用于覆盖父元素的背景色并且保持文字居中*/
     padding: 0 1rem;                 /*字体大小1倍的左右内边距*/
-    color: #5fc0cd;                /*字体颜色*/
+    width: 50%;                       /*元素宽度，各占50%，更改字体大小时保证元素宽度不会收缩*/
 }
 
 /*用于改变左边元素的字体颜色和背景色*/
 .box .clear-style {
-    color: #fff;
     background-color: transparent;        /*背景色透明*/
+}
+
+.box span a {
+    color: #5fc0cd;
+}
+
+.box .clear-style a {
+    color: #fff;
 }
 
 /*头部图片绝对定位在头部右边*/
@@ -66,36 +77,82 @@ header img {
     margin-right: 0;       /*右外边距设为0使图片靠右*/
 }
 
-/*----------主页--------------*/
-main {
+/*-----------下拉菜单-----------*/
+/*-------总体---------*/
+nav {
     margin-top: 5rem;
-}
-.flex {
-    display: flex;
-    justify-content: space-around;
     border-bottom: 1px solid #e1e5e7;
+}
+nav a {
     color: #999;
 }
 
-.flex-1 span {
-    display: inline-block;
-    padding: 1rem;
-    
+nav a:visited {
+    text-decoration: none;
+    color: #999;
+}
+
+nav a:hover {
+    color: #999;
+}
+
+ul {
+    list-style-type: none;
+    z-index: 9999;
+    margin: 0;
+}
+
+/*----------一级菜单------------*/
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+.list1 {
+    padding-bottom: 1rem;
 }
 
 .bg-img {
     background-image: linear-gradient(to top,#fff,#e1e5e7,#fff);
     width: 1px;
+    padding-bottom: 1rem;
 }
 
+.pad {
+    display: inline-block;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+/*------------二级菜单--------------*/
+.list1 ul {
+    display: none;
+    position: absolute;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.list1:hover ul {
+    display: block;
+}
+
+.list1 ul li {
+    background-color: #fe1;
+}
+
+.list1 ul a {
+    padding-right: 1rem;
+}
+
+/*------------主页部分------------*/
 .main {
     border-bottom: 1px solid #e1e5e7;
     padding: 1rem;
-    padding-left: 2rem;
+    padding-left: 3rem;
 }
 
 .gray {
     color: #999;
+    text-align: left;
 }
 
 .red {
@@ -109,24 +166,25 @@ main {
     line-height: 1.5;
     vertical-align: middle;
     padding: 0;
+    color: #000;
 }
 
-.col-xs-4 {
+div.col-xs-4 {
     padding: 0;
     line-height: 1.5;
     vertical-align: middle;
     white-space: nowrap;
 }
 
-.col-xs-4 img {
-    transform: scale(1);
+div.col-xs-4 img {
     zoom: .5;
-}
+    margin-top: -6px;            /*图片上移6像素，暂定*/
+} 
 
 .main {
     background-image: url(images/task6/1.png);
     background-repeat: no-repeat;
-    background-position: 0 1rem;
+    background-position: 1rem 1rem;
     background-size: auto 65px;
 }
 
@@ -137,7 +195,7 @@ footer {
     position: fixed;                       /*尾部固定定位在底端*/
     bottom: 0;
     width: 100%;                            /*宽度为100%*/
-    height: 11%;
+    height: 4rem;
     background-color: #f8fafb;            /*背景色*/
 }
 
@@ -148,7 +206,6 @@ footer .center {
     bottom: 0;
     left: 0;
     margin: auto;
-    transform: scale(1);       /*覆盖掉之前所设置的图片缩放，scale（）属性缩放后的空间不会减小*/
     zoom: .6;                 /*图片缩放0.6倍，zoom属性会使缩放后的图片所占空间减小*/
 }
 
@@ -162,13 +219,32 @@ footer .center {
     margin: auto;
     margin-left: 0;
     width: 50%;
+    height: 100%;
     text-align: center;
 }
 
-.left span {
-    display: block;              /*文字改为块级元素，自动在图片下面*/
-    color: #5fc0cd;            /*字体颜色*/
+.left img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-top: .6rem;
 }
+
+.left span {
+    color: #5fc0cd;            /*字体颜色*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    line-height: 6rem;
+}
+
 .right {
     position: absolute;        /*绝对定位在右侧，内容水平居中*/
     top: 0;
@@ -178,10 +254,28 @@ footer .center {
     margin: auto;
     margin-right: 0;
     width: 50%;
+    height: 100%;
     text-align: center;
 }
 
+.right img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-top: .6rem;
+}
+
 .right span {
-    display: block;                /*文字改为块级元素，自动在图片下面*/
-    color: #a6a7a7;                /*字体颜色*/
+    color: #a6a7a7;            /*字体颜色*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    line-height: 6rem;
 }
