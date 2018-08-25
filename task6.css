@@ -183,6 +183,7 @@ main {
 div.col-xs-4 {
     padding: 0;
     white-space: nowrap;
+    text-align: right;
 }
 
 div.col-xs-4 img {
