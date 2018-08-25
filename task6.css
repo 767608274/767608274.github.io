@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    line-height: 1.5;
 }
 
 /*设置字体大小为16像素，页面高度为100%*/
@@ -14,6 +15,7 @@ img {
     zoom: .7;
 }
 
+a:visited,
 a:hover {
     text-decoration: none;
 }
@@ -23,9 +25,13 @@ header {
     position: fixed;                       /*头部固定定位*/
     top: 0;                                /*顶部距离为0，紧贴顶部*/
     width: 100%;                           /*宽度100%，必须设置*/
-    height: 5rem;                           /*高度为字体的5倍高*/
-    background-color: #5fc0cd;           /*背景颜色*/
     z-index: 9999;
+}
+
+.wrap {
+    position: relative;
+    height: 4rem;                           /*高度为字体的5倍高*/
+    background-color: #5fc0cd;           /*背景颜色*/
 }
 
 .box {
@@ -67,12 +73,12 @@ header {
 }
 
 /*头部图片绝对定位在头部右边*/
-header img {
+.wrap img {
     position: absolute;     /*绝对定位保持垂直居中并且距右边框设定距离*/
     top: 0;
     bottom: 0;
     left: 0;
-    right: 1%;
+    right: 1rem;
     margin: auto;          /*auto导致垂直水平居中*/
     margin-right: 0;       /*右外边距设为0使图片靠右*/
 }
@@ -80,18 +86,19 @@ header img {
 /*-----------下拉菜单-----------*/
 /*-------总体---------*/
 nav {
-    margin-top: 5rem;
+    width: 100%;
+    height: 3rem;
+    background-color: #fff;
     border-bottom: 1px solid #e1e5e7;
 }
+
+.list1,
 nav a {
-    color: #999;
+    line-height: 1;
 }
 
-nav a:visited {
-    text-decoration: none;
-    color: #999;
-}
-
+nav a,
+nav a:visited,
 nav a:hover {
     color: #999;
 }
@@ -114,7 +121,6 @@ ul {
 .bg-img {
     background-image: linear-gradient(to top,#fff,#e1e5e7,#fff);
     width: 1px;
-    padding-bottom: 1rem;
 }
 
 .pad {
@@ -127,8 +133,7 @@ ul {
 .list1 ul {
     display: none;
     position: absolute;
-    padding: 1rem;
-    padding-top: 0;
+    padding-left: 1rem;
 }
 
 .list1:hover ul {
@@ -136,7 +141,7 @@ ul {
 }
 
 .list1 ul li {
-    background-color: #fe1;
+    background-color: #fff;
 }
 
 .list1 ul a {
@@ -144,15 +149,23 @@ ul {
 }
 
 /*------------主页部分------------*/
+
+main {
+    margin-top: 7rem;
+}
+
 .main {
     border-bottom: 1px solid #e1e5e7;
     padding: 1rem;
     padding-left: 3rem;
+    background-image: url(images/task6/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 1rem 1.2rem;
+    background-size: 1rem;
 }
 
 .gray {
     color: #999;
-    text-align: left;
 }
 
 .red {
@@ -163,16 +176,12 @@ ul {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1.5;
-    vertical-align: middle;
     padding: 0;
     color: #000;
 }
 
 div.col-xs-4 {
     padding: 0;
-    line-height: 1.5;
-    vertical-align: middle;
     white-space: nowrap;
 }
 
@@ -181,15 +190,6 @@ div.col-xs-4 img {
     margin-top: -6px;            /*图片上移6像素，暂定*/
 } 
 
-.main {
-    background-image: url(images/task6/1.png);
-    background-repeat: no-repeat;
-    background-position: 1rem 1rem;
-    background-size: auto 65px;
-}
-
-
-
 /*------------尾部---------------------*/
 footer {
     position: fixed;                       /*尾部固定定位在底端*/
@@ -197,6 +197,7 @@ footer {
     width: 100%;                            /*宽度为100%*/
     height: 4rem;
     background-color: #f8fafb;            /*背景色*/
+    border-top: 1px solid #e1e5e7;
 }
 
 footer .center {
@@ -209,55 +210,30 @@ footer .center {
     zoom: .6;                 /*图片缩放0.6倍，zoom属性会使缩放后的图片所占空间减小*/
 }
 
-/*还未垂直居中*/
-.left {
-    position: absolute;       /*绝对定位在左侧，内容水平居中*/
+/*--------左右元素的定位-------------*/
+.left,
+.right {
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
-    margin-left: 0;
     width: 50%;
     height: 100%;
     text-align: center;
 }
 
-.left img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    margin-top: .6rem;
-}
-
-.left span {
-    color: #5fc0cd;            /*字体颜色*/
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 100%;
-    line-height: 6rem;
+.left {
+    margin-left: 0;
 }
 
 .right {
-    position: absolute;        /*绝对定位在右侧，内容水平居中*/
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
     margin-right: 0;
-    width: 50%;
-    height: 100%;
-    text-align: center;
 }
 
+/*------------左右元素中图片的定位-----------*/
+.left img,
 .right img {
     position: absolute;
     top: 0;
@@ -268,8 +244,9 @@ footer .center {
     margin-top: .6rem;
 }
 
+/*----------图片下面文字的定位------------*/
+.left span,
 .right span {
-    color: #a6a7a7;            /*字体颜色*/
     position: absolute;
     top: 0;
     right: 0;
@@ -278,4 +255,12 @@ footer .center {
     margin: auto;
     width: 100%;
     line-height: 6rem;
+}
+
+.left span {
+    color: #5fc0cd;            /*字体颜色*/
+}
+
+.right span {
+    color: #a6a7a7;            /*字体颜色*/
 }
