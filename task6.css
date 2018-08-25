@@ -151,7 +151,12 @@ ul {
 /*------------主页部分------------*/
 
 main {
-    margin-top: 7rem;
+    position: absolute;        /*使滚动条只出现在主页上*/
+    top: 7rem;
+    bottom: 4rem;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .main {
