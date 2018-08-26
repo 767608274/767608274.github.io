@@ -59,7 +59,7 @@ main {
     background-image: url(images/task5/head-portrait.png);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
-    background-position: -.5rem 0;
+    background-size: 100%;
     width: 100px;
     height: 100px;
     border-radius: 50%;
