@@ -1,78 +1,103 @@
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
 }
-body {
-    font-family:sans-serif;
-    font-size:200%;
-    line-height:1.2;
-    color:#fff;
-    background-color:#eff0f4;
+
+html,body {
+    font-size: 16px;
+    background-color: #eff0f4;
 }
-.header {
-    background-color:#5fc0cd;
-    overflow:auto;
-    padding:5.4% 4.6% 2.1% 4.6%;
+
+/*------------头部------------*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    line-height: 3rem;
+    color: #fff;
+    text-align: center;
+    background-color: #5fc0cd;
 }
-.header1 {
-    float:left;
+
+header a {
+    color: #fff;
+    text-decoration: none;
 }
-.header2 {
-    float:right;
+
+.enroll {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    margin-left: 1rem;
+    width: 30%;
+    height: 1.5rem;
+    text-align: left;
 }
-.header3 {
-    display:block;
-    text-align:center;
-    font-size:112.5%;
+
+.close {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    margin-right: 1rem;
+    width: 30%;
+    height: 1.5rem;
+    text-align: right;
 }
-.header a {
-    color:#fff;
-    text-decoration:none;
+
+.sign-in {
+    font-weight: bold;
 }
-.form div {
-    background-color:#fff;
-    margin-top:1.2%;
+
+form {
+    margin-top: 3.5rem;
 }
-/*设定用于输入的input元素*/
-.form div input {
-    width:70%;
-    margin:2% 0;
-    font-size:inherit;
+
+form div {
+    display: flex;
+    margin-bottom: .5rem;
+    background-color: #fff;
 }
-/*改变input元素中placeholder属性的字体颜色*/
-.form div input::placeholder {
-    color:#eff0f4;
+
+img {
+    zoom: .5;
+    vertical-align: middle;
+    padding: 0 1rem;
+    border-right: 1px solid #e1e5e7;
+    margin: 1rem 0;
 }
-/*利用子选择符设定点击按钮的样式*/
-.form>input {
-    display:block;
-    background-color:#5fc0cd;
-    width:100%;
-    margin-top:5%;
-    color:#fff;
-    padding:2% 0;
-    font-size:112.5%;
+
+div input {
+    margin: 1rem;
+    outline: none;
+    flex-grow: 1;
+    border: none;
 }
-.form input {
-    border:none;     /*隐藏input元素的边框*/
-    outline:none;   /*隐藏当点击input元素所产生的焦点*/
+
+div input::placeholder {
+    color: #e1e5e7;
 }
-/*利用紧邻同胞选择符对span元素进行浮动*/
-.form+span {
-    float:right;
-    margin-bottom:30%;
+
+input[type="button"] {
+    background-color: #5fc0cd;
+    width: 100%;
+    color: #fff;
+    line-height: 3rem;
+    outline: none;
+    border: none;
 }
-/*为span元素中的a元素设定颜色，为span元素设定颜色由于继承原因导致a元素不会改变颜色*/
-.form+span a {
-    color:#5fc0cd;
+
+form + span {
+    float: right;
+    margin: .5rem;
 }
-/*图片与input元素相平*/
-.form img,.form input {
-    vertical-align:middle;
-}
-/*通过为img添加右边框与实现分隔线*/
-.form img {
-    padding:0 3%;
-    border-right:3px solid #eff0f4;
-    max-width:100%;
+
+form + span a {
+    color: #5fc0cd;
 }
