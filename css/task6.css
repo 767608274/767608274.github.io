@@ -1,0 +1,272 @@
+/*清除所有元素的内外边距*/
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/*设置字体大小为16像素，页面高度为100%*/
+html,body {
+    font-size: 16px;
+}
+
+/*所有图片缩放0.7倍*/
+img {
+    zoom: .7;
+}
+
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+/*----------头部--------*/
+header {
+    position: fixed;                       /*头部固定定位*/
+    top: 0;                                /*顶部距离为0，紧贴顶部*/
+    width: 100%;                           /*宽度100%，必须设置*/
+    z-index: 9999;
+}
+
+.wrap {
+    position: relative;
+    height: 4rem;                           /*高度为字体的5倍高*/
+    background-color: #5fc0cd;           /*背景颜色*/
+}
+
+.box {
+    position: absolute;             /*绝对定位，通过设置上、右、下、左为0，以及外边距为auto，保持水平垂直居中*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    /*absolute和margin所形成的水平垂直居中尚需学习*/
+
+    background-color: #55a8b3;     /*背景颜色*/
+    width: 10rem;                    /*以字体大小（16px）*10rem（10倍）所形成的宽度*/
+    height: 3rem;                    /*以字体大小（16px）*3rem（3倍）所形成的的高度*/
+    border-radius: .625rem;          /*以字体大小（16px）*0.625rem（0.625倍）所形成的圆角弧度*/
+    text-align: center;              /*文字居中*/
+}
+
+.box span {
+    background-color: #fff;        /*背景色*/
+    display: inline-block;           /*由inline元素转为inline-block元素*/
+    border-radius: .625rem;          /*圆角*/
+    line-height: 3rem;               /*字体大小3倍的文本高度，用于覆盖父元素的背景色并且保持文字居中*/
+    padding: 0 1rem;                 /*字体大小1倍的左右内边距*/
+    width: 50%;                       /*元素宽度，各占50%，更改字体大小时保证元素宽度不会收缩*/
+}
+
+/*用于改变左边元素的字体颜色和背景色*/
+.box .clear-style {
+    background-color: transparent;        /*背景色透明*/
+}
+
+.box span a {
+    color: #5fc0cd;
+}
+
+.box .clear-style a {
+    color: #fff;
+}
+
+/*头部图片绝对定位在头部右边*/
+.wrap img {
+    position: absolute;     /*绝对定位保持垂直居中并且距右边框设定距离*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 1rem;
+    margin: auto;          /*auto导致垂直水平居中*/
+    margin-right: 0;       /*右外边距设为0使图片靠右*/
+}
+
+/*-----------下拉菜单-----------*/
+/*-------总体---------*/
+nav {
+    width: 100%;
+    height: 3rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e1e5e7;
+}
+
+.list1,
+nav a {
+    line-height: 1;
+}
+
+nav a,
+nav a:visited,
+nav a:hover {
+    color: #999;
+}
+
+ul {
+    list-style-type: none;
+    z-index: 9999;
+    margin: 0;
+}
+
+/*----------一级菜单------------*/
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+.list1 {
+    padding-bottom: 1rem;
+}
+
+.bg-img {
+    background-image: linear-gradient(to top,#fff,#e1e5e7,#fff);
+    width: 1px;
+}
+
+.pad {
+    display: inline-block;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+/*------------二级菜单--------------*/
+.list1 ul {
+    display: none;
+    position: absolute;
+    padding-left: 1rem;
+}
+
+.list1:hover ul {
+    display: block;
+}
+
+.list1 ul li {
+    background-color: #fff;
+}
+
+.list1 ul a {
+    padding-right: 1rem;
+}
+
+/*------------主页部分------------*/
+
+main {
+    position: absolute;        /*使滚动条只出现在主页上*/
+    top: 7rem;
+    bottom: 4rem;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.main {
+    border-bottom: 1px solid #e1e5e7;
+    padding: 1rem;
+    padding-left: 3rem;
+    background-image: url(images/task6/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 1rem 1.2rem;
+    background-size: 1rem;
+}
+
+.gray {
+    color: #999;
+}
+
+.red {
+    color: #e63b0e;
+}
+
+.col-xs-8 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+    color: #000;
+}
+
+div.col-xs-4 {
+    padding: 0;
+    white-space: nowrap;
+    text-align: right;
+}
+
+div.col-xs-4 img {
+    zoom: .5;
+    margin-top: -6px;            /*图片上移6像素，暂定*/
+} 
+
+/*------------尾部---------------------*/
+footer {
+    position: fixed;                       /*尾部固定定位在底端*/
+    bottom: 0;
+    width: 100%;                            /*宽度为100%*/
+    height: 4rem;
+    background-color: #f8fafb;            /*背景色*/
+    border-top: 1px solid #e1e5e7;
+}
+
+footer .center {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    zoom: .6;                 /*图片缩放0.6倍，zoom属性会使缩放后的图片所占空间减小*/
+}
+
+/*--------左右元素的定位-------------*/
+.left,
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+.left {
+    margin-left: 0;
+}
+
+.right {
+    margin-right: 0;
+}
+
+/*------------左右元素中图片的定位-----------*/
+.left img,
+.right img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-top: .6rem;
+}
+
+/*----------图片下面文字的定位------------*/
+.left span,
+.right span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    line-height: 6rem;
+}
+
+.left span {
+    color: #5fc0cd;            /*字体颜色*/
+}
+
+.right span {
+    color: #a6a7a7;            /*字体颜色*/
+}
